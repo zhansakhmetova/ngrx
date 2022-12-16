@@ -1,3 +1,4 @@
+
 export interface Cart extends Product {
   date: string;
   id: number;
@@ -21,4 +22,10 @@ export interface Details {
     count: string;
   };
   title: string;
+}
+
+export interface AppState {
+  cart: Cart;
+  details: Details;
+  spinner?: any;
 }

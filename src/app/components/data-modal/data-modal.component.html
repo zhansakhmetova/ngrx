@@ -1,0 +1,22 @@
+
+<div class="modal-header w-100">
+  <h4 class="modal-title">{{data?.title}}</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body" *ngIf="!loading">
+  <p><span class="fw-bold">Category:</span> {{ data?.category}}!</p>
+  <p><span class="fw-bold">Description: </span>{{data?.description}}</p>
+  <p><span class="fw-bold">Price: </span>{{data?.price}}</p>
+  <div>
+    <img class="img-fluid" *ngIf="!loading" src="{{data?.image}}" alt="">
+  </div>
+  <p><span class="fw-bold">Rate: </span>{{data.rating.rate}}</p>
+  <p><span class="fw-bold">Count: </span>{{data.rating.count}}</p>
+
+</div>
+<div class="text-center" *ngIf="loading">Loading. . . </div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+

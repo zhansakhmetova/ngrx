@@ -11,7 +11,7 @@ export class GeneralService {
   }
 
   getCart() {
-    return this.http.get<Cart>(`https://fakestoreapi.com/carts/`)
+    return this.http.get<Cart[]>(`https://fakestoreapi.com/carts/`)
       .pipe();
   }
 
